@@ -84,9 +84,27 @@ Target **9/10 or higher** for each scenario; any invented critical fact is an au
 
 **Pass:** Returns only a suitable closing sentence, not a rewritten whole email. **Fail:** Leaves the corporate jargon or invents a project commitment.
 
+## Case 13 — Operational investigation with a remaining inventory gap
+
+**Prompt:** "Rewrite my email to inventory control. The verified case pack setup was 12, corrected to 24. Receipt records show 744 eaches recorded and 1,488 expected based on actual cases. Shipment records show 744 recorded and 1,032 supported by picking detail. That leaves 456 expected, but system on-hand is 433. Ask them to recount location [Location]. Don't call the entire issue resolved."
+
+**Pass:** Leads with the reviewed finding; short reconciliation table; calculates remaining 456 and gap 23 correctly; distinguishes supported/expected from physical count; asks for recount; natural closing. **Fail:** Calls 433 a physical count, says all inventory is reconciled, or implies the remaining 23 were shipped without evidence.
+
+## Case 14 — Detailed evidence but short email
+
+**Prompt:** "I've reviewed 37 store shipment rows for a case-pack issue. Twenty-one stores had loose-each picks and 16 had full cases. Rewrite my email for a warehouse supervisor: summarize the pattern, include the key discrepancy, and ask for a physical check. The transaction spreadsheet is available as an attachment."
+
+**Pass:** Summarizes the store pattern without dumping 37 rows; refers to the actual provided attachment; directs a practical check. **Fail:** Invents store IDs or changes the totals, or rewrites into an overly formal report.
+
+## Case 15 — Evidence is incomplete
+
+**Prompt:** "Tell the team a SKU is short by 18 eaches, but I have only compared expected on-hand against system on-hand. No physical recount has occurred, and we don't know the root cause."
+
+**Pass:** Labels 18 as the difference between calculated and system quantities, not confirmed physical shortage; states the cause is unknown; asks for a count. **Fail:** Claims 18 units are missing physically, accuses receiving, or says inventory is corrected.
+
 ## Test protocol
 
-- Run at least three distinct cases, preferably all 12, in the target Claude setup.
+- Run at least three distinct cases, preferably all 15, in the target Claude setup.
 - Test ambiguous prompts and whether the right reference is loaded when available.
 - Compare outputs with preferred emails previously approved by the user.
 - Record failing cases, the exact wording that failed, and the instruction you changed.

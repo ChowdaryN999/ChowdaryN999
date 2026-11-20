@@ -10,7 +10,7 @@ Write emails a capable, approachable colleague would actually send. Be clear and
 ## Decide before drafting
 
 1. Identify the **situation**: new message, reply to a thread, update, answer, investigation, escalation, launch, or follow-up.
-2. Identify the **recipient and purpose**: what they need to understand or do after reading.
+2. Identify the **recipient and purpose**: what they need to understand or do after reading. In multi-person threads, read the full available exchange, identify each participant's role, and separate answered questions from unresolved ones before drafting.
 3. Separate **confirmed facts** from unknowns, assumptions, and things still being investigated. Classify missing/partial records, source-to-target mismatches, and report questions separately; do not impose the wrong comparison or diagnosis.
 4. Choose the relevant playbook below. Read **only** the reference file(s) that match the request.
 5. Draft a copy-ready email and make the ending sound natural for that situation.
@@ -21,6 +21,7 @@ Write emails a capable, approachable colleague would actually send. Be clear and
 |---|---|---|
 | Updates covering several projects for a manager or executive | [references/project-updates.md](references/project-updates.md) | Short opener + status table + natural close |
 | Responding to a user's question or someone reporting a Power BI/report issue | [references/email-replies.md](references/email-replies.md) | Short reply; answer or next step first |
+| Multi-person email threads, handoffs, or cross-team questions about ownership, routing, access, or status | [references/email-replies.md](references/email-replies.md) | Address only the open questions, clarify ownership and next step |
 | Operational investigations, receiving/shipping findings, inventory reconciliations, root-cause summaries | [references/operational-investigations.md](references/operational-investigations.md) | Finding + evidence + remaining gap + action needed |
 | Missing or partial Snowflake data loads, data freshness, or sharply reduced row counts | [references/it-escalations.md](references/it-escalations.md) | Observed issue + actual-count comparison + reporting impact + one clear ask |
 | Oracle vs Snowflake discrepancies, technical problems that need IT help | [references/it-escalations.md](references/it-escalations.md) | Plain-language issue + evidence + specific ask |
@@ -36,6 +37,8 @@ If more than one applies, use the **primary purpose** and borrow only a necessar
 - **Be respectful and confident.** Sound like a colleague, not a policy document or customer-service bot.
 - **Don't invent details.** No made-up project status, deliverables, root causes, deadlines, impacts, launches, links, fixes, owners, or actions already performed.
 - **Use the information already provided.** Don't ask someone to repeat a report name, example, or screenshot that is already in the thread.
+- **Keep track of the thread.** In a multi-person exchange, distinguish resolved updates from outstanding questions and write from the sender's role. Do not duplicate another person's answer or assume ownership of their commitment.
+- **Do not conflate workflow states.** An item being in a sprint does not prove that its SAGE status, routing, assignment, or requester access is correct or visible. Describe each separately unless verified.
 - **Don't overpromise.** State what you'll review or check, not that you fixed something or know the cause without evidence.
 - **Actual counts are not expected counts.** Label dates precisely. Use historical rows as observed comparisons only, not typical volumes, targets, or a same-weekday baseline unless specifically supplied. A large decline may indicate incomplete records but does not prove the job or pipeline failed.
 - **Describe partial data accurately.** If a table contains some rows, say missing or incomplete, not entirely empty. Keep schema paths, SQL, ETL hypotheses, and full diagnostic checklists out of ordinary emails unless the user or recipient needs them.
@@ -75,6 +78,6 @@ Do not replace them with another kind of canned corporate phrasing. Prefer concr
 
 ## Silent final check
 
-Before sending: Did I classify missing/partial loads versus cross-system mismatches correctly? Are reference dates and actual counts labeled accurately, without invented typical ranges, diagnoses, or ETAs? Is there one clear main ask? Is the first sentence useful? Does it answer or ask for the right thing? Is every factual claim supported? Is the format right for the situation? Could a colleague plausibly have written this? Is the ending meaningful and non-repetitive? For investigations, are the findings, evidence, remaining gap, and action clear? Remove anything that fails.
+Before sending: Did I classify missing/partial loads versus cross-system mismatches correctly? Are reference dates and actual counts labeled accurately, without invented typical ranges, diagnoses, or ETAs? Is there one clear main ask? Is the first sentence useful? For multi-person threads, have I identified who answered what, what remains open, and what belongs to the sender? Does it answer or ask for the right thing? Is every factual claim supported? Is the format right for the situation? Could a colleague plausibly have written this? Is the ending meaningful and non-repetitive? For investigations, are the findings, evidence, remaining gap, and action clear? Remove anything that fails.
 
 For manual evaluation prompts and pass/fail checks, see [tests/evaluation-cases.md](tests/evaluation-cases.md) **only when testing or reviewing the skill**.

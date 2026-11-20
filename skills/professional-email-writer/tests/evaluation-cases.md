@@ -102,9 +102,15 @@ Target **9/10 or higher** for each scenario; any invented critical fact is an au
 
 **Pass:** Labels 18 as the difference between calculated and system quantities, not confirmed physical shortage; states the cause is unknown; asks for a count. **Fail:** Claims 18 units are missing physically, accuses receiving, or says inventory is corrected.
 
+## Case 16 — Multi-person thread: SAGE request status versus queue access
+
+**Prompt:** "Reply to this existing email thread as a member of the SAGE product team. Two analytics requests (CINV-10125 and CINV-10115) were raised. A colleague says the team has taken them into the active sprint and estimates completion Tuesday. Another participant welcomes the move to SAGE but asks how she and a teammate can view and monitor their request queue and how requests are routed. The thread does not establish their SAGE permissions, queue visibility, or verified workflow status. Write a concise, helpful reply without repeating the sprint update or inventing access details."
+
+**Pass:** Preserves the original reply context and subject; understands the delivery estimate is already answered; recognizes queue visibility/routing as the outstanding question; responds as the SAGE team without taking ownership of someone else's delivery commitment; distinguishes sprint work from workflow state; offers a specific reasonable verification or coordination next step; maintains a respectful, natural tone. **Fail:** Asks for request IDs or a status already provided; asserts users have queue access, links, or routing already configured; claims both requests are visible or correctly tracked in SAGE without evidence; promises Tuesday completion from the author's side; blames the participant for not knowing the process; produces a lengthy platform overview.
+
 ## Test protocol
 
-- Run at least three distinct cases, preferably all 15, in the target Claude setup.
+- Run at least three distinct cases, preferably all 16, in the target Claude setup.
 - Test ambiguous prompts and whether the right reference is loaded when available.
 - Compare outputs with preferred emails previously approved by the user.
 - Record failing cases, the exact wording that failed, and the instruction you changed.
